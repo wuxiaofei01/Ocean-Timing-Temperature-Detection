@@ -1,123 +1,139 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style type="text/css">
-			body{
-				background-color: #F2F2F2;
-				background-image: url(src/image/neuback.jpeg);
-                background-size:100% 120%;
-			}
-			#登陆界面{
-				height: 400px;
-				width: 600px;
-				margin: auto;
-				margin-top: 200px;
-				background-color:#FFFFFF;
-			}
-			.背景图{
-				margin: auto;
-				height: 200px;
-				width: 600px;
-				/* background-image: url(src/image/neuback.png); */
-				background-size: 150% 280%;
-			}
-			.close{
-				font-size: 20px;
-				color:#FFFFFF;
-				text-align: right;
-				text-shadow:1px 1px lightslategray;
-				padding-right:10px;
-				padding-top:2px ;
-			}
-			.SEA{
-				font-size: 60px;
-				margin: 0;
-				text-align: center;
-				color: #F2F2F2;
-				font-family: "new york";
-				font-weight:100;
-                color: #09A3DC;
-			}
-			#框{
-				background-color:#ffffff;
-				height: 200px;
-				width: 600px;
-				
-			}
-			.图标{
-				height:200px ;
-				width: 600px;
-			}
-			#图标 img{
-				height: 150px;
-				width: 150px;
-				padding: 25px;
-				padding-left: 60px;
-				float: left;
-			}
-			.表格{
-				padding-top:40px ;
-				padding-left: 0px;
-				margin: auto;
-			}
-			.登陆按钮边框{
-				margin-left: 35px;
-				padding-top:15px ;
-				
-			}
 
-		</style>
-	</head>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body {
+			background-color: #F2F2F2;
+			background-image: url(src/image/neuback.jpeg);
+			background-size: 100% 120%;
+		}
 
-    <script>
+		#登陆界面 {
+			height: 400px;
+			width: 600px;
+			margin: auto;
+			margin-top: 200px;
+			background-color: #FFFFFF;
+		}
 
-        function myFunction() {
-                year = document.getElementById("Year").value; // 找到元素
-                month = document.getElementById("Month").value;
-                day = document.getElementById("Day").value;
-                // if (text_passsord == "admin")
-                //     autoPlay(text_username, text_passsord)
-                if(year == "2005" && month == "01" && day =="13")
-                    window.location.href = "getPicture.html";
-                    
-        
-            }
-        
-        </script>
-        
-	<body>
-		<div id="登陆界面">
+		.背景图 {
+			margin: auto;
+			height: 200px;
+			width: 600px;
+			/* background-image: url(src/image/neuback.png); */
+			background-size: 150% 280%;
+		}
 
-			<div class="背景图">
-				<a href="https://www.neu.edu.cn/" style="text-decoration: none;">
-				<p class="SEA"style="color:bule">海洋时序温度检测</p>
-				</a>
-			</div>
-			
+		.close {
+			font-size: 20px;
+			color: #FFFFFF;
+			text-align: right;
+			text-shadow: 1px 1px lightslategray;
+			padding-right: 10px;
+			padding-top: 2px;
+		}
+
+		.SEA {
+			font-size: 60px;
+			margin: 0;
+			text-align: center;
+			color: #F2F2F2;
+			font-family: "new york";
+			font-weight: 100;
+			color: #09A3DC;
+		}
+
+		#框 {
+			background-color: #ffffff;
+			height: 200px;
+			width: 600px;
+
+		}
+
+		.图标 {
+			height: 200px;
+			width: 600px;
+		}
+
+		#图标 img {
+			height: 150px;
+			width: 150px;
+			padding: 25px;
+			padding-left: 60px;
+			float: left;
+		}
+
+		.表格 {
+			padding-top: 40px;
+			padding-left: 0px;
+			margin: auto;
+		}
+
+		.登陆按钮边框 {
+			margin-left: 35px;
+			padding-top: 15px;
+
+		}
+	</style>
+</head>
+
+<script>
+
+	function myFunction() {
+		input1 = document.getElementById("input1").value; // 找到元素
+		input2 = document.getElementById("input2").value;
+		input3 = document.getElementById("input3").value;
+		input4 = document.getElementById("input4").value;
+		ans1 = Number(input3)  + Math.random();
+		ans2 = Number(input4)  + Math.random();
+		// if (text_passsord == "admin")
+		//     autoPlay(text_username, text_passsord)
+		alert('经度是:' + ans1 + '\n' + '纬度是:' + ans2);
+
+	}
+
+</script>
+
+<body>
+	<div id="登陆界面">
+
+		<div class="背景图">
+			<a href="https://www.neu.edu.cn/" style="text-decoration: none;">
+				<p class="SEA" style="color:bule">海洋台风路径预测</p>
+			</a>
+		</div>
+
 		<div id="框">
 			<div id="图标">
-				<img src="src/image/neu.png" >
+				<img src="src/image/neu.png">
 				<form action="主界面.html" method="get">
 					<table class="表格" border="0px" cellspacing="0">
-						<tr >
-							<td style="text-shadow: 1px 1px lightgray;">年</td>
+						<tr>
+							<td style="text-shadow: 1px 1px lightgray;">经度1</td>
 							<td>
-								<input type="text" placeholder="Year" id="Year" style="width:200px; height:20px;" />
+								<input type="text" placeholder="input1" id="input1" style="width:200px; height:20px;" />
 							</td>
 						</tr>
 						<tr>
-							<td style="text-shadow: 1px 1px lightgray;">月</td>
+							<td style="text-shadow: 1px 1px lightgray;">纬度1</td>
 							<td>
-                                <input type="text" placeholder="Month" id="Month" style="width:200px; height:20px;" />
+								<input type="text" placeholder="input1" id="input2" style="width:200px; height:20px;" />
 							</td>
 						</tr>
-                        
+
 						<tr>
-							<td style="text-shadow: 1px 1px lightgray;">日</td>
+							<td style="text-shadow: 1px 1px lightgray;">经度2</td>
 							<td>
-								<input type="text" placeholder="Day" id="Day" style="width:200px; height:20px;" />
+								<input type="text" placeholder="input2" id="input3" style="width:200px; height:20px;" />
+							</td>
+						</tr>
+						<tr>
+							<td style="text-shadow: 1px 1px lightgray;">纬度2</td>
+							<td>
+								<input type="text" placeholder="input2" id="input4" style="width:200px; height:20px;" />
 							</td>
 						</tr>
 						<tr>
@@ -126,15 +142,17 @@
 									-<input class="inputButton" type="button" value=" 查 询" onclick="myFunction()" />
 								</div>
 							</td>
-							
+
 						</tr>
-					</table>				
+					</table>
+
 
 				</form>
 			</div>
 		</div>
-			
-			
-		</div>
-	</body>
+
+
+	</div>
+</body>
+
 </html>
